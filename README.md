@@ -37,7 +37,7 @@ supported locales:
 
 _example:_
 ```
-curl localhost:9292/analyze?text=this%20is%20hello%20world.
+curl https://language-analyzer-service.herokuapp.com/analyze?text=this%20is%20hello%20world.
 ```
 
 _response:_
@@ -75,7 +75,7 @@ supported locales:
 
 _example:_
 ```
-curl -X POST localhost:9292/analyze \
+curl -X POST https://language-analyzer-service.herokuapp.com/analyze \
   --header "Content-Type:application/json" \
   --data '{"locale": "en", "text": "this is hello world."}'
 ```
