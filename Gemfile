@@ -5,6 +5,7 @@ ruby '2.2.2'
 gem 'faraday', '0.9.1'
 gem 'puma', '2.11.3'
 gem 'rack', '1.6.4'
+gem 'rack-contrib'
 gem 'sinatra', '1.4.6'
 gem 'rake'
 

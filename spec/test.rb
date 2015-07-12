@@ -12,20 +12,23 @@ def app
 end
 
 describe "Service" do
-  let(:text) { 'hello' }
+  let(:text) { 'test' }
+  let(:locale) { 'en' }
 
   [:get, :post].each do |type|
-    describe "#{type}" do
-      subject { send type, "/analyze?text=#{text}" }
+    LOCALES.each do |locale, analyzer|
+      describe "#{type} request with locale=#{locale}" do
+        subject { send type, "/analyze?locale=#{locale}&text=#{text}" }
 
-      it "should return json" do
-        subject
-        last_response.headers['Content-Type'].must_equal 'application/json'
-      end
+        it "should return json" do
+          subject
+          last_response.headers['Content-Type'].must_equal 'application/json'
+        end
 
-      it "should return the correct tokens" do
-        subject
-        last_response.body.must_match text
+        it "should return the correct tokens" do
+          subject
+          JSON.parse(last_response.body)['tokens'].length.must_equal 1
+        end
       end
     end
   end
