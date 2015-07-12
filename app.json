@@ -1,0 +1,13 @@
+{
+  "name": "Language Analyzer Service",
+  "description": "API for analyzing text",
+  "website": "http://language-analyzer-service.herokuapp.com",
+  "success_url": "/analyze?text=hello world",
+  "addons": ["searchbox"],
+  "env": {
+    "RAILS_ENV": "production",
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}
