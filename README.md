@@ -1,7 +1,5 @@
 ## Description
-This simple microservice uses an elasticsearch backend featuring the [analyze](https://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-analyze.html) endpoint.
-
-Given a input string, it will return a list of tokens after performing the following transformations:
+Given an input string, it will return a list of tokens after performing the following transformations:
 
 1. [tokenize](https://www.elastic.co/guide/en/elasticsearch/reference/1.6/analysis-tokenizers.html)
 2. filter [stopwords](https://en.wikipedia.org/wiki/Stop_words)
