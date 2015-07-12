@@ -3,12 +3,18 @@ GEM
   specs:
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    minitest (5.7.0)
+    minitest-rg (5.1.0)
+      minitest (~> 5.0)
     multipart-post (2.0.0)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (10.4.2)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -19,7 +25,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  faraday
-  puma
-  rack
-  sinatra
+  faraday (= 0.9.1)
+  minitest (= 5.7.0)
+  minitest-rg (= 5.1.0)
+  puma (= 2.11.3)
+  rack (= 1.6.4)
+  rack-test (= 0.6.3)
+  rake
+  sinatra (= 1.4.6)

@@ -1,13 +1,9 @@
 {
-  "name": "Language Analyzer Service",
-  "description": "API for analyzing text",
-  "website": "http://language-analyzer-service.herokuapp.com",
-  "success_url": "/analyze?text=hello world",
   "addons": ["searchbox"],
-  "env": {
-    "RAILS_ENV": "production",
-  },
-  "scripts": {
-    "postdeploy": "bundle exec rake db:migrate"
-  }
+  "description": "API for analyzing text",
+  "name": "Language Analyzer Service",
+  "repository": "https://github.com/weeyum/language-analyzer-service",
+  "scripts": { "postdeploy": "bundle exec rake" },
+  "success_url": "/analyze?text=hello world",
+  "website": "http://language-analyzer-service.herokuapp.com"
 }
