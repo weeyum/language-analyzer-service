@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
 
 gem 'faraday', '0.9.1'
 gem 'puma', '2.11.3'
